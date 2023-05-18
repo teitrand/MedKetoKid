@@ -2,13 +2,17 @@
 
 import type { V2_MetaFunction } from "@remix-run/node";
 
-export const meta: V2_MetaFunction = () => {
-  return {
-    title: "Ingredient Lookup",
-    description: "Page for looking up ingredients"
-  };
-};
-
+// This is the updated syntax for V2
+export let meta: V2_MetaFunction = () => {
+    return [{
+      name: 'description',
+      content: 'Page for looking up ingredients'
+    }, {
+      name: 'title',
+      content: 'Ingredient Lookup'
+    }];
+  }
+  
 export default function IngredientLookup() {
   return (
     <div>

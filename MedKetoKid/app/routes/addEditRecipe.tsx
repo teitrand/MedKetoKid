@@ -1,8 +1,7 @@
-// routes/addEditRecipe.tsx
+import { V2_MetaFunction as MetaFunction } from "@remix-run/react";
 
-import type { V2_MetaFunction } from "@remix-run/node";
 
-export const meta: V2_MetaFunction = () => {
+export let meta: MetaFunction = () => {
   return {
     title: "Add/Edit Recipe",
     description: "Page for adding or editing recipes"

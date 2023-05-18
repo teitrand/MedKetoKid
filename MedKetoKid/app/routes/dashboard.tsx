@@ -2,13 +2,16 @@
 
 import type { V2_MetaFunction } from "@remix-run/node";
 
-export const meta: V2_MetaFunction = () => {
-  return {
-    title: "Dashboard",
-    description: "User Dashboard"
-  };
-};
-
+export let meta: V2_MetaFunction = () => {
+    return [{
+      name: 'description',
+      content: 'User Dashboard'
+    }, {
+      name: 'title',
+      content: 'Dashboard'
+    }];
+  }
+  
 export default function Dashboard() {
   return (
     <div>

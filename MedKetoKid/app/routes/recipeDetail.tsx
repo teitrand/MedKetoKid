@@ -2,13 +2,16 @@
 
 import type { V2_MetaFunction } from "@remix-run/node";
 
-export const meta: V2_MetaFunction = () => {
-  return {
-    title: "Recipe Detail",
-    description: "Detailed view of a selected recipe"
-  };
-};
-
+export let meta: V2_MetaFunction = () => {
+    return [{
+      name: 'description',
+      content: 'Detailed view of a selected recipe'
+    }, {
+      name: 'title',
+      content: 'Recipe Detail'
+    }];
+  }
+  
 export default function RecipeDetail() {
   return (
     <div>
