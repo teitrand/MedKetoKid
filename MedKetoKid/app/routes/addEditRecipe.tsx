@@ -1,12 +1,14 @@
-import { V2_MetaFunction as MetaFunction } from "@remix-run/react";
+import type { V2_MetaFunction } from "@remix-run/node";
 
-
-export let meta: MetaFunction = () => {
-  return {
-    title: "Add/Edit Recipe",
-    description: "Page for adding or editing recipes"
-  };
-};
+export let meta: V2_MetaFunction = () => {
+    return [{
+      name: 'description',
+      content: 'Page for adding or editing recipes'
+    }, {
+      name: 'title',
+      content: 'Add/Edit Recipe'
+    }];
+  }
 
 export default function AddEditRecipe() {
   return (

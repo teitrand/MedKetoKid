@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 //import { ketogenicRatio, carbs, protein, fats } from "../config/ketogenicsConfig";
-import config from "../config/ketogenicsConfig";
+import config from "config/ketogenicsConfig";
 
 export default function KetoDetailsPage() {
   return (
